@@ -4,12 +4,33 @@ import java.util.Scanner;
 class M1159{
 	public static void main(String args[]){
 		Scanner scan = new Scanner(System.in);
-		String line=scan.nextLine();
-		String[] hoge=line.split(" ");
-		int[] data=new int[hoge.length];
-		for(int i=0;i<hoge.length;i++){
-            data[i]=Integer.parseInt(hoge[i]);
-            System.out.println(data[i]);
+		while(true){
+      int n=scan.nextInt();
+      int p=scan.nextInt();
+      // int n=3,p=2;
+      if(n==0 && p==0){
+        break;
+      }
+      int[] data=new int[n];
+      int i=0,temp=p;
+      while(true){
+        if(i==n){
+          i=0;
+        }
+        if(temp>0){
+          temp--;
+          data[i]++;
+        }
+        else{
+          temp=data[i];
+          data[i]=0;
+        }
+        if(data[i]==p){
+          break;
+        }
+        i++;        
+      }
+      System.out.println(i);
 		}
 	}
 }
