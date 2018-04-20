@@ -31,7 +31,7 @@ public class M1188 {
                             break;
                         }
                         k++;
-                        hoge=hoge+a;
+//                        hoge=hoge+a;
                     }
                     j=j+k;
                     int hogehoge=Integer.parseInt(hoge);
@@ -44,9 +44,9 @@ public class M1188 {
                 }
                 else if(mozi.equals("]")){
                     open=false;
-                    if(close){
-                        for()
-                    }
+//                    if(close){
+//                        for()
+//                    }
                     close=false;
                 }
             }
