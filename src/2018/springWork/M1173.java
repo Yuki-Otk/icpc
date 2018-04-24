@@ -21,13 +21,19 @@ class M1173 {
                         // System.out.println("[add]i="+i+":j="+j+":size="+list.size());
                     } else if (input.charAt(i) == strings[1].charAt(j)) {
                         // System.out.println("[deleat]i="+i+":j="+j+":size="+list.size());
-                        if (list.get(list.size() - 1) == j) {
-                            list.remove(list.size() - 1);
-                        } else {
-                            i = input.length();
+                        try {
+                            if (list.get(list.size() - 1) == j) {
+                                list.remove(list.size() - 1);
+                            } else {
+                                i = input.length();
+                                flag = false;
+                                break;
+                            }
+                        } catch (Exception e) {
                             flag = false;
                             break;
                         }
+
                     }
                 }
             }
