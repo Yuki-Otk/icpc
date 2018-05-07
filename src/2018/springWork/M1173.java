@@ -37,6 +37,9 @@ class M1173 {
                     }
                 }
             }
+            if (list.size() != 0) {
+                flag = false;
+            }
             if (flag) {
                 System.out.println("yes");
             } else {
